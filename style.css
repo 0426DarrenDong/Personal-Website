@@ -1,0 +1,61 @@
+
+body{
+  background: url("https://getwallpapers.com/wallpaper/full/7/c/6/765090-most-popular-technology-background-images-1920x1080-hd-for-mobile.jpg");
+  background-size: cover;
+  color: white; 
+  padding: 0px 10px 0px 10px;
+  margin: 0 auto; 
+}
+h1{
+  font-size: 70px;
+  text-align: left; 
+}
+.nav{
+  background: url("https://tse1.mm.bing.net/th?id=OIP.RzuqnKa8ahgTV8NIIVZ5mwHaEK&pid=Api");
+  background-size: cover;
+}
+.nav li{
+  display: inline; 
+  font-size: 20px; 
+  padding: 10px 10px 0px 10px; 
+}
+.nav li a{
+  color:white; 
+}
+
+p{
+  font-size: 20px; 
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -80px;
+}
+.footer,
+.push {
+  height: 50px;
+}
+.footer li{
+  display: inline; 
+  padding: 0px 15px 0px 15px; 
+}
+.footer ul{
+  text-align: left;
+  background: url("https://tse1.mm.bing.net/th?id=OIP.RzuqnKa8ahgTV8NIIVZ5mwHaEK&pid=Api");
+  background-size: cover;
+}
+
+#thanks{
+  text-align: center; 
+  font-size: 50px;
+}
+
+#social{
+  text-align: center; 
+}
