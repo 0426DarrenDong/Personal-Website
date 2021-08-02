@@ -1,32 +1,3 @@
-function getDay(){
-  let date = new Date().getDay(); 
-  let string; 
-  switch (date){
-    case 0: 
-      string = "Happy Sunday! Welcome to my Webpage!";
-      break; 
-    case 1: 
-      string = "Happy Monday! Welcome to my Webpage";
-      break; 
-    case 2:
-      string = "Happy Tuesday! Welcome to my Webpage";
-      break; 
-    case 3: 
-      string = "Happy Wednesday! Welcome to my Webpage";
-      break; 
-    case 4:
-      string = "Happy Thursday! Welcome to my Webpage";
-      break; 
-    case 5: 
-      string = "Happy Friday! Welcome to my Webpage";
-      break; 
-    case 6: 
-      string = "Happy Saturday! Welcome to my Webpage";
-      break; 
-  }
-  document.getElementById("day").innerHTML = string; 
-}
-
 function checkInputs(){
   if (fname.value == ""){
     alert("Enter your first name!");
@@ -194,7 +165,7 @@ function reveal(head){
       document.getElementById('current').innerHTML = "";
     }
     else{
-      document.getElementById('current').innerHTML = "Now, I am in the Bronx High School of Science, soon to graduate in 2022. Freshman year, I was getting to know high school life and did not take many hard classes except honors geometry and one extra curricular. Sophomore year, I incrased the difficulty by taking my first AP class in biology as well as honors spanish and honors algebra 2. I didn't do so well in AP bio exam (only got a 3) and biology has become my least favorite science course. I also ioncreased my clubs to 2 that is Key Club and Desktop Robotics Club. In junior year, I took a huge leap into 5 AP courses in english language and composition, calculus BC, physics 1, us history, and computer science A. So far, only physics score has been released (got a 4). Hopefully, the rest will be well too. I also maintained my two clubs except I joined Hackers club instead of Key Club.  Senior year can arguably be the hardest year given colleges, but I plan to take post Ap courses in mathematics and computer science as well as AP courses in economics and physics. Hoepfully, I don't bite more than what I can chew."; 
+      document.getElementById('current').innerHTML = "Now, I am in the Bronx High School of Science, soon to graduate in 2022. Freshman year, I was getting to know high school life and did not take many hard classes except honors geometry and one extra curricular. Sophomore year, I incrased the difficulty by taking my first AP class in biology as well as honors spanish and honors algebra 2. I didn't do so well in AP bio exam (only got a 3) and biology has become my least favorite science course. I also ioncreased my clubs to 2 that is Key Club and Desktop Robotics Club. In junior year, I took a huge leap into 5 AP courses in english language and composition, calculus BC, physics 1, us history, and computer science A. So far, I recieved a 4 in physics and english language and a 5 in calculus. Hopefully, the rest will be well too. I also maintained my two clubs except I joined Hackers club instead of Key Club.  Senior year can arguably be the hardest year given colleges, but I plan to take post Ap courses in mathematics and computer science as well as AP courses in economics and physics. Hopefully, I don't bite more than what I can chew."; 
     }
   }
   if (head == 'hobbies_program'){
@@ -226,24 +197,9 @@ function reveal(head){
       document.getElementById('sport').innerHTML = "";
     }
     else{
-      document.getElementById('sport').innerHTML = "I enjoy playing all sorts of sports with friends. I'm not a hardcore player but might be consider beginner or intermural. I played basketball throughout middle school and even now in the summer in playgrounds occasionally. In elementary school and middle school, I played soccer with my friends in the park or afterschool. I also played football in middle school during recess with my friends. In high school, my firneds and I may go to Badminton club to play badminton. Overall, sports are a fun way for me to engage with my friends while also exercising."
+      document.getElementById('sport').innerHTML = "I enjoy playing all sorts of sports with friends. I'm not a hardcore player but might be consider beginner or intermural. I played basketball throughout middle school and even now in the summer in playgrounds occasionally. In elementary school and middle school, I played soccer with my friends in the park or afterschool. I also played football in middle school during recess with my friends. In high school, my friends and I may go to Badminton club to play badminton. Overall, sports are a fun way for me to engage with my friends while also exercising."
     }
   }
 }
 
-var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 
-function sendEmail() {
-      Email.send({
-        Host: "smtp.gmail.com",
-        Username: "sender@email_address.com",
-        Password: "Enter your password",
-        To: '2015ddon@gmail.com',
-        From: "dongd@bxscience.edu.com",
-        Subject: "Sending Comments from Website",
-        Body: "Well that was easy!!",
-      })
-        .then(function (message) {
-          location.href = "thanks.html"; 
-        });
-}
